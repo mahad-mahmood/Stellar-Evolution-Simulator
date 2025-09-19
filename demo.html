@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Evolution Simulator - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .demo-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .demo-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+        
+        .demo-header p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .feature-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .feature-card p {
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            color: #b0b0b0;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+        }
+        
+        .demo-buttons {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .demo-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        }
+        
+        .screenshot {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>🌟 Stellar Evolution Simulator</h1>
+            <p>An interactive, educational web application that simulates the evolution of stars based on their mass and metallicity</p>
+            <div class="demo-buttons">
+                <a href="index.html" class="demo-btn">🚀 Launch Simulator</a>
+                <a href="README.md" class="demo-btn">📚 Read Documentation</a>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🌟 Core Physics</h3>
+                <p>Realistic stellar evolution based on established physics:</p>
+                <ul class="feature-list">
+                    <li>Mass-dependent evolution paths</li>
+                    <li>Realistic time scales</li>
+                    <li>Fusion stages (H→He→C/O→Fe)</li>
+                    <li>Supernova simulation</li>
+                    <li>Remnant properties</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎨 Visualization</h3>
+                <p>Beautiful, interactive visualizations:</p>
+                <ul class="feature-list">
+                    <li>Hertzsprung-Russell diagram</li>
+                    <li>Animated timeline</li>
+                    <li>Dynamic star icon</li>
+                    <li>Real-time properties</li>
+                    <li>Preset famous stars</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>📊 Scientific Accuracy</h3>
+                <p>Compare with real stellar data:</p>
+                <ul class="feature-list">
+                    <li>Real star comparisons</li>
+                    <li>Energy calculations</li>
+                    <li>Element production</li>
+                    <li>Metallicity effects</li>
+                    <li>Stellar properties</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌌 Advanced Features</h3>
+                <p>Cutting-edge astrophysics:</p>
+                <ul class="feature-list">
+                    <li>Binary star systems</li>
+                    <li>Gravitational waves</li>
+                    <li>Accretion disks</li>
+                    <li>Mass transfer</li>
+                    <li>LIGO detection</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎓 Educational Value</h3>
+                <p>Perfect for learning astronomy:</p>
+                <ul class="feature-list">
+                    <li>Interactive learning</li>
+                    <li>Real-time feedback</li>
+                    <li>Scientific explanations</li>
+                    <li>Famous star examples</li>
+                    <li>Export data</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>💻 Technical Excellence</h3>
+                <p>Built with modern web technologies:</p>
+                <ul class="feature-list">
+                    <li>Pure JavaScript</li>
+                    <li>Canvas graphics</li>
+                    <li>Responsive design</li>
+                    <li>60 FPS animations</li>
+                    <li>No dependencies</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="demo-header">
+            <h2>🎮 How to Use</h2>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <ol style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem;">
+                    <li><strong>Set Parameters:</strong> Adjust the mass slider (0.1 - 100 M☉) and metallicity (0.0001 - 0.03)</li>
+                    <li><strong>Run Simulation:</strong> Click "🚀 Simulate Evolution" or press Enter to start the animation</li>
+                    <li><strong>Watch Evolution:</strong> Observe the star's transformation through different stages</li>
+                    <li><strong>Explore H-R Diagram:</strong> See the star's path on the Hertzsprung-Russell diagram</li>
+                    <li><strong>Compare Stars:</strong> Use preset buttons to explore famous stars like the Sun, Betelgeuse, etc.</li>
+                    <li><strong>Try Binary Systems:</strong> Simulate binary star systems and gravitational wave events</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="demo-header">
+            <h2>🌟 Stellar Evolution Paths</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+                <div style="background: rgba(255, 107, 107, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ff6b6b;">
+                    <h3 style="color: #ff6b6b; margin-bottom: 10px;">Low Mass (< 0.5 M☉)</h3>
+                    <p style="color: #e0e0e0; margin: 0;">Red Dwarf → White Dwarf<br><small>Trillions of years</small></p>
+                </div>
+                <div style="background: rgba(255, 215, 0, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #ffd700;">
+                    <h3 style="color: #ffd700; margin-bottom: 10px;">Intermediate (0.5 - 8 M☉)</h3>
+                    <p style="color: #e0e0e0; margin: 0;">Main Sequence → Red Giant → White Dwarf<br><small>Billions of years</small></p>
+                </div>
+                <div style="background: rgba(78, 205, 196, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid #4ecdc4;">
+                    <h3 style="color: #4ecdc4; margin-bottom: 10px;">High Mass (8 - 20 M☉)</h3>
+                    <p style="color: #e0e0e0; margin: 0;">Main Sequence → Red Supergiant → Supernova → Neutron Star<br><small>Millions of years</small></p>
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 10px; border-left: 4px solid #000;">
+                    <h3 style="color: #fff; margin-bottom: 10px;">Very High Mass (> 20 M☉)</h3>
+                    <p style="color: #e0e0e0; margin: 0;">Main Sequence → Blue Supergiant → Supernova → Black Hole<br><small>Millions of years</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-buttons">
+            <a href="index.html" class="demo-btn">🌟 Start Exploring Stars Now!</a>
+        </div>
+    </div>
+</body>
+</html>
+

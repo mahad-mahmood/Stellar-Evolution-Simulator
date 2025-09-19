@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Evolution Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌟 Stellar Evolution Simulator</h1>
+            <p>Explore how stars evolve based on their mass and composition</p>
+        </header>
+
+        <div class="main-content">
+            <div class="control-panel">
+                <div class="input-group">
+                    <label for="starMass">Initial Mass (M☉)</label>
+                    <input type="range" id="starMass" min="0.1" max="100" step="0.1" value="1.0">
+                    <span id="massValue">1.0 M☉</span>
+                </div>
+                
+                
+                <button id="simulateBtn" class="simulate-btn">🚀 Start Evolution</button>
+                <button id="nextPhaseBtn" class="next-phase-btn" style="display: none;">⏭️ Next Phase</button>
+                
+                <div class="preset-stars">
+                    <h3>Famous Stars</h3>
+                    <button class="preset-btn" data-mass="1.0">☀️ Sun</button>
+                    <button class="preset-btn" data-mass="0.12">🔴 Proxima Centauri</button>
+                    <button class="preset-btn" data-mass="20">🔵 Betelgeuse</button>
+                    <button class="preset-btn" data-mass="0.5">⭐ Red Dwarf</button>
+                </div>
+            </div>
+
+            <div class="visualization-area">
+                <div class="star-display">
+                    <div id="starIcon" class="star-icon">⭐</div>
+                    <div id="starInfo" class="star-info">
+                        <h3 id="starName">Your Star</h3>
+                        <div id="starProperties"></div>
+                    </div>
+                </div>
+
+                <div class="star-image-container">
+                    <h3>Real Star Images</h3>
+                    <div id="starImage" class="star-image">
+                        <img id="starPhoto" src="" alt="Star phase image" style="display: none;">
+                        <div id="imageCaption" class="image-caption"></div>
+                    </div>
+                </div>
+
+                <div class="timeline-container">
+                    <h3>Evolution Timeline</h3>
+                    <div id="timeline" class="timeline"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="physics-panel">
+            <h3>Physics Details</h3>
+            <div id="physicsInfo" class="physics-info">
+                <div class="info-section">
+                    <h4>Current Stage</h4>
+                    <div id="currentStage"></div>
+                </div>
+                <div class="info-section">
+                    <h4>Energy Output</h4>
+                    <div id="energyOutput"></div>
+                </div>
+                <div class="info-section">
+                    <h4>Element Production</h4>
+                    <div id="elementProduction"></div>
+                </div>
+                <div class="info-section">
+                    <h4>Stellar Properties</h4>
+                    <div id="stellarProperties"></div>
+                </div>
+                <div class="info-section">
+                    <h4>Similar Stars</h4>
+                    <div id="starComparison"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="stellar-physics.js"></script>
+    <script src="visualization.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
